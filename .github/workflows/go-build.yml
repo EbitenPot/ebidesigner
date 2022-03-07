@@ -1,0 +1,104 @@
+name: Go-build
+
+on:
+  push:
+    paths-ignore:
+      - '**/*.md'
+      - .gitignore
+      - .editorconfig
+      - appveyor.yml
+      - 'azure-pipelines*.yml'
+      - 'ci/azure-pipelines/template*.yml'
+
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - .gitignore
+      - .editorconfig
+      - appveyor.yml
+      - 'azure-pipelines*.yml'
+      - 'ci/azure-pipelines/template*.yml'
+
+jobs:
+  build-windows:
+    name: Go-build on  ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Go-build
+      run: go build
+    
+    - name: copy to dir
+      run: cp govcl-template.exe ./win64/
+      shell: bash
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        name: ${{ github.sha }}-${{ matrix.os }}
+        path: ./win64/
+              
+  build-ubuntu:
+    name: Go-build on  ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Go-build
+      run: go build
+    
+    - name: copy to dir
+      run: cp govcl-template ./linux64/
+      shell: bash
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        name: ${{ github.sha }}-${{ matrix.os }}
+        path: ./linux64/
+
+
+  build-macos:
+    name: Go-build on  ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Go-build
+      run: go build
+
+    - name: copy to dir
+      run: cp govcl-template ./macOS64/
+      shell: bash
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        name: ${{ github.sha }}-${{ matrix.os }}
+        path: ./macOS64/
+
