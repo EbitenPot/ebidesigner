@@ -1,9 +1,147 @@
 object Mainform: TMainform
-  Left = 556
-  Height = 240
-  Top = 279
-  Width = 320
+  Left = 359
+  Height = 768
+  Top = 97
+  Width = 1109
   Caption = 'Mainform'
+  ClientHeight = 768
+  ClientWidth = 1109
   OnCreate = FormCreate
   LCLVersion = '2.0.10.0'
+  object LeftBox: TGroupBox
+    Left = 0
+    Height = 768
+    Top = 0
+    Width = 248
+    Align = alLeft
+    Caption = 'LeftBox'
+    ClientHeight = 746
+    ClientWidth = 244
+    ParentColor = False
+    TabOrder = 0
+    object PageControl: TPageControl
+      Left = 0
+      Height = 746
+      Top = 0
+      Width = 244
+      ActivePage = TabSheet1
+      Align = alClient
+      TabIndex = 0
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'TabSheet1'
+        ClientHeight = 716
+        ClientWidth = 236
+        object GroupBox1: TGroupBox
+          Left = 0
+          Height = 249
+          Top = 0
+          Width = 236
+          Align = alTop
+          Caption = 'GroupBox1'
+          ClientHeight = 227
+          ClientWidth = 232
+          TabOrder = 0
+          object StartButton: TButton
+            Left = 0
+            Height = 25
+            Top = 202
+            Width = 232
+            Align = alBottom
+            Caption = 'start'
+            OnClick = StartButtonClick
+            TabOrder = 0
+          end
+          object Titlename: TEdit
+            Left = 0
+            Height = 25
+            Top = 177
+            Width = 232
+            Align = alBottom
+            TabOrder = 1
+            Text = 'Ebiten'
+          end
+          object Label1: TLabel
+            Left = 0
+            Height = 17
+            Top = 160
+            Width = 232
+            Align = alBottom
+            Caption = 'Title Name'
+            ParentColor = False
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'TabSheet2'
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'TabSheet3'
+      end
+    end
+  end
+  object RightBox: TGroupBox
+    Left = 888
+    Height = 768
+    Top = 0
+    Width = 221
+    Align = alRight
+    Caption = 'RightBox'
+    ClientHeight = 746
+    ClientWidth = 217
+    ParentColor = False
+    TabOrder = 1
+    object PageControl1: TPageControl
+      Left = 0
+      Height = 746
+      Top = 0
+      Width = 217
+      ActivePage = TabSheet4
+      Align = alClient
+      TabIndex = 0
+      TabOrder = 0
+      OnChange = PageControl1Change
+      object TabSheet4: TTabSheet
+        Caption = 'TabSheet1'
+        ClientHeight = 716
+        ClientWidth = 209
+        object GroupBox2: TGroupBox
+          Left = 0
+          Height = 249
+          Top = 0
+          Width = 209
+          Align = alTop
+          Caption = 'GroupBox1'
+          ClientHeight = 227
+          ClientWidth = 205
+          TabOrder = 0
+          object Button2: TButton
+            Left = 0
+            Height = 25
+            Top = 0
+            Width = 205
+            Align = alTop
+            Caption = 'start'
+            OnClick = StartButtonClick
+            TabOrder = 0
+          end
+        end
+      end
+      object TabSheet5: TTabSheet
+        Caption = 'TabSheet2'
+      end
+      object TabSheet6: TTabSheet
+        Caption = 'TabSheet3'
+      end
+    end
+  end
+  object MiddleBox: TGroupBox
+    Left = 248
+    Height = 768
+    Top = 0
+    Width = 640
+    Align = alClient
+    Caption = 'MiddleBox'
+    TabOrder = 2
+  end
 end

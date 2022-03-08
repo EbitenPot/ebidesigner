@@ -8,6 +8,23 @@ import (
 
 type TMainform struct {
     *vcl.TForm
+    LeftBox      *vcl.TGroupBox
+    RightBox     *vcl.TGroupBox
+    MiddleBox    *vcl.TGroupBox
+    PageControl  *vcl.TPageControl
+    TabSheet1    *vcl.TTabSheet
+    TabSheet2    *vcl.TTabSheet
+    TabSheet3    *vcl.TTabSheet
+    GroupBox1    *vcl.TGroupBox
+    StartButton  *vcl.TButton
+    PageControl1 *vcl.TPageControl
+    TabSheet4    *vcl.TTabSheet
+    GroupBox2    *vcl.TGroupBox
+    Button2      *vcl.TButton `events:"OnStartButtonClick"`
+    TabSheet5    *vcl.TTabSheet
+    TabSheet6    *vcl.TTabSheet
+    Titlename    *vcl.TEdit
+    Label1       *vcl.TLabel
 
     //::private::
     TMainformFields

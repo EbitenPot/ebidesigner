@@ -1,0 +1,11 @@
+object EbitenForm: TEbitenForm
+  Left = 572
+  Height = 0
+  Top = 257
+  Width = 120
+  Caption = 'EbitenForm'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.0.10.0'
+end

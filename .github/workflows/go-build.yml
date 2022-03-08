@@ -38,7 +38,7 @@ jobs:
       run: go build
     
     - name: copy to dir
-      run: cp govcl-template.exe ./win64/
+      run: cp ebidesigner.exe ./win64/
       shell: bash
 
     - name: Upload a Build Artifact
@@ -65,7 +65,7 @@ jobs:
       run: go build
     
     - name: copy to dir
-      run: cp govcl-template ./linux64/
+      run: cp ebidesigner ./linux64/
       shell: bash
       
     - name: Upload a Build Artifact
@@ -93,7 +93,7 @@ jobs:
       run: go build
 
     - name: copy to dir
-      run: cp govcl-template ./macOS64/
+      run: cp ebidesigner ./macOS64/
       shell: bash
       
     - name: Upload a Build Artifact
