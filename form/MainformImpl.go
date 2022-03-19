@@ -1,6 +1,7 @@
 package form
 
 import (
+	"github.com/EbitenPot/ebidesigner/ebiwindow"
 	"github.com/ying32/govcl/vcl"
 )
 
@@ -17,7 +18,12 @@ func (f *TMainform) OnStartButtonClick(sender vcl.IObject) {
 	EbitenForm.Show()
 }
 
-func (f *TMainform) OnPageControl1Change(sender vcl.IObject) {
+func (f *TMainform) OnXxxxxxChange(sender vcl.IObject) {
+	ebiwindow.EbitenGame.Px= float64(f.Xxxxxx.Position())
+}
 
+
+func (f *TMainform) OnYyyyyyyChange(sender vcl.IObject) {
+	ebiwindow.EbitenGame.Py= float64(f.Yyyyyyy.Position())
 }
 
