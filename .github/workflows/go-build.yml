@@ -21,7 +21,7 @@ on:
 
 jobs:
   build-windows:
-    name: Go-build on  ${{ matrix.os }}
+    name: Go-build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -48,11 +48,11 @@ jobs:
         path: ./win64/
               
   build-ubuntu:
-    name: Go-build on  ${{ matrix.os }}
+    name: Go-build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-18.04]
 
     steps:
     - uses: actions/checkout@v2
@@ -79,7 +79,7 @@ jobs:
 
 
   build-macos:
-    name: Go-build on  ${{ matrix.os }}
+    name: Go-build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
