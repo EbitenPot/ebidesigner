@@ -20,7 +20,7 @@ type Object struct {
 
 func (o *Object) Ttest() {
 	o.U = ebiten.NewImage(100, 100)
-	fmt.Println("ebiten.NewImage(100, 100) OK ",o.U)
+	fmt.Println("ebiten.NewImage(100, 100) OK ", o.U)
 	o.Otype = EBITEN_IMAGE
 	o.U.(*ebiten.Image).Fill(color.RGBA{R: 124, G: 5, B: 233, A: 255})
 }

@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-    vcl.Application.SetTitle("ebidesigner")
-    vcl.Application.SetScaled(true)
+	vcl.Application.SetTitle("ebidesigner")
+	vcl.Application.SetScaled(true)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-    vcl.Application.CreateForm(&form.Mainform)
+	vcl.Application.CreateForm(&form.Mainform)
 	//go ebiwindow.InitEbiten()
 	vcl.Application.Run()
 

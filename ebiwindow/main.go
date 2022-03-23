@@ -17,8 +17,8 @@ type Game struct {
 	ScreenHeight int
 	Objects      []*Object
 	OK           int
-	Px	float64
-	Py	float64
+	Px           float64
+	Py           float64
 }
 
 //func NewGame() *Game {
@@ -50,9 +50,9 @@ func (g *Game) Draw(screen *ebiten.Image) {
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
 	return 640, 480
 }
-func init(){
-	EbitenGame.Title="Ebiten"
-	EbitenGame.OK=0
+func init() {
+	EbitenGame.Title = "Ebiten"
+	EbitenGame.OK = 0
 	if EbitenGame.OK == 0 {
 		EbitenGame.Objects = append(EbitenGame.Objects, &Object{})
 		for i, o := range EbitenGame.Objects {

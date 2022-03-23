@@ -19,11 +19,9 @@ func (f *TMainform) OnStartButtonClick(sender vcl.IObject) {
 }
 
 func (f *TMainform) OnXxxxxxChange(sender vcl.IObject) {
-	ebiwindow.EbitenGame.Px= float64(f.Xxxxxx.Position())
+	ebiwindow.EbitenGame.Px = float64(f.Xxxxxx.Position())
 }
-
 
 func (f *TMainform) OnYyyyyyyChange(sender vcl.IObject) {
-	ebiwindow.EbitenGame.Py= float64(f.Yyyyyyy.Position())
+	ebiwindow.EbitenGame.Py = float64(f.Yyyyyyy.Position())
 }
-
