@@ -39,7 +39,12 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	for _, o := range g.Objects {
 		switch o.Otype {
 		case EBITEN_IMAGE:
-			op := &ebiten.DrawImageOptions{}
+			op := &ebiten.DrawImageOptions{
+				GeoM:          ebiten.GeoM{},
+				ColorM:        ebiten.ColorM{},
+				CompositeMode: 0,
+				Filter:        0,
+			}
 			op.GeoM.Scale(1, 1)
 			op.GeoM.Translate(g.Px, g.Py)
 			screen.DrawImage(o.U.(*ebiten.Image), op)
